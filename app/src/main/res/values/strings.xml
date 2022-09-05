@@ -2,5 +2,16 @@
     <string name="app_name">PicPay</string>
     <string name="title">Contatos</string>
     <string name="error">Ocorreu um erro. Tente novamente.</string>
+    <string name="title_activity_main_compose">MainComposeActivity</string>
 
+    <string name="try_again">Tentar novamente</string>
+
+    <!-- Error Messages -->
+    <string name="unknown_error">Unknown error</string>
+
+    <!-- Network Error Messages -->
+    <string name="not_found_error">Not found</string>
+    <string name="access_denied_error">Access denied</string>
+    <string name="service_unavailable_error">Service unavailable</string>
+    <string name="unknown_network_error">Unknown network error</string>
 </resources>

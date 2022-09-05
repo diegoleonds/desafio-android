@@ -1,4 +1,4 @@
-package com.picpay.desafio.android
+package com.picpay.desafio.android.ui.main
 
 import android.view.View
 import android.widget.ProgressBar
@@ -8,6 +8,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.picpay.desafio.android.R
+import com.picpay.desafio.android.data.service.UserService
+import com.picpay.desafio.android.data.model.User
+import com.picpay.desafio.android.ui.userlist.adapter.UserListAdapter
 import okhttp3.OkHttpClient
 import retrofit2.Call
 import retrofit2.Callback
@@ -17,6 +21,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
+    /**
+     *
     private lateinit var recyclerView: RecyclerView
     private lateinit var progressBar: ProgressBar
     private lateinit var adapter: UserListAdapter
@@ -38,8 +44,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             .build()
     }
 
-    private val service: PicPayService by lazy {
-        retrofit.create(PicPayService::class.java)
+    private val service: UserService by lazy {
+        retrofit.create(UserService::class.java)
     }
 
     override fun onResume() {
@@ -72,4 +78,5 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                 }
             })
     }
+     */
 }
