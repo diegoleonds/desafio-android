@@ -66,7 +66,7 @@ internal class FetchUsersUseCaseTest {
         }
         coEvery { repository.getUsers() } returns flow
 
-        val result = repository.getUsers().take(1).toList()[0]
+        val result = useCase.fetchUsers().take(1).toList()[0]
         assertTrue(result is Result.Fail)
     }
 
@@ -77,7 +77,7 @@ internal class FetchUsersUseCaseTest {
         }
         coEvery { repository.getUsers() } returns flow
 
-        val result = repository.getUsers().take(1).toList()[0]
+        val result = useCase.fetchUsers().take(1).toList()[0]
         assertTrue(result is Result.Success)
     }
 }
