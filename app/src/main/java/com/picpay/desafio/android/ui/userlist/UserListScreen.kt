@@ -16,7 +16,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.picpay.desafio.android.R
-import com.picpay.desafio.android.data.model.User
+import com.picpay.desafio.android.domain.model.user.User
+import com.picpay.desafio.android.domain.model.user.DomainUser
 import com.picpay.desafio.android.ui.baseui.component.AsyncUserItem
 import com.picpay.desafio.android.ui.baseui.component.LoadingIndicator
 import com.picpay.desafio.android.ui.baseui.component.TryAgainErrorMessage
@@ -107,11 +108,11 @@ private fun ErrorStateScreen(
 @Composable
 @Preview("Success State")
 private fun PreviewSuccessState() {
-    val users = ArrayList<User>()
-    for (i in 0 until 20) {
+    val users = ArrayList<DomainUser>()
+    for (i in 0 until 5) {
         users.add(
-            User(
-                id = i,
+            DomainUser(
+                id = i.toLong(),
                 name = "Test $i",
                 username = "Test username $i",
                 img = "no"
