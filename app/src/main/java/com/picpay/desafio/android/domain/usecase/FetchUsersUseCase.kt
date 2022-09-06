@@ -4,8 +4,6 @@ import com.picpay.desafio.android.data.repository.UserRepository
 import com.picpay.desafio.android.data.wrapper.Result
 import com.picpay.desafio.android.domain.model.user.DomainUser
 import com.picpay.desafio.android.domain.model.user.DomainUserTransform
-import com.picpay.desafio.android.ui.extensions.getMessageResource
-import com.picpay.desafio.android.ui.userlist.UiState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -17,7 +15,7 @@ class FetchUsersUseCase(
 ) {
     suspend fun fetchUsers(): Flow<Result<List<DomainUser>>> {
         return flow {
-            val result = repository.getUsersFromStore()
+            val result = repository.getUsers()
             result.collect {
                 when (it) {
                     is Result.Success -> {

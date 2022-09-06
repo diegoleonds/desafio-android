@@ -51,7 +51,7 @@ fun TryAgainErrorMessage(
 private fun BaseErrorMessage(
     message: String,
     modifier: Modifier = Modifier,
-    additionalContent:  @Composable ColumnScope.() -> Unit = {}
+    additionalContent: @Composable ColumnScope.() -> Unit = {}
 ) {
     Column(
         verticalArrangement = Arrangement.Center,

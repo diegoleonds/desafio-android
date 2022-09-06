@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 
 interface UserRepository {
-    suspend fun getUsersFromStore(): Flow<Result<List<User>>>
+    suspend fun getUsers(): Flow<Result<List<User>>>
 }
 
 class UserRepositoryImpl(
@@ -28,7 +28,7 @@ class UserRepositoryImpl(
         private const val getUsers = "get_users"
     }
 
-    override suspend fun getUsersFromStore(): Flow<Result<List<User>>> {
+    override suspend fun getUsers(): Flow<Result<List<User>>> {
         val store = StoreBuilder
             .from(
                 fetcher = Fetcher.of { remoteDataSource.getUsers() },
